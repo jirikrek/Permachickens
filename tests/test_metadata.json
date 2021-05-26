@@ -1,0 +1,9 @@
+{
+	"res://tests/cohesion_tests.gd": {
+		"path": "res://tests/cohesion_tests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	}
+}

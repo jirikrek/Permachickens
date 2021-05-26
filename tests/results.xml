@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<testsuites failures="0" name="TestXML" tests="1" time="0">
+	<testsuite name="Cohesion S" failures="0"  tests="3" time="0">
+		<testcase name=" cohesion triplet1" time="0"></testcase>
+		<testcase name=" cohesion pair" time="0"></testcase>
+		<testcase name=" cohesion triplet2" time="0"></testcase>
+	</testsuite>
+
+</testsuites>
