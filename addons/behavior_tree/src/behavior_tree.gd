@@ -32,6 +32,7 @@ func _process(delta: float) -> void:
 	if debug:
 		print()
 	
+	blackboard.set_data("delta", delta)
 	tick_result = bt_root.tick(agent, blackboard)
 	
 	if tick_result is GDScriptFunctionState:

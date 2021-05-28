@@ -3,8 +3,8 @@
 [ext_resource path="res://addons/behavior_tree/src/blackboard.gd" type="Script" id=1]
 [ext_resource path="res://behavior_tree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://flock/flock.tscn" type="PackedScene" id=4]
 [ext_resource path="res://camerfix.gd" type="Script" id=5]
-[ext_resource path="res://flock.gd" type="Script" id=6]
 [ext_resource path="res://chicken/chicken.tscn" type="PackedScene" id=7]
 [ext_resource path="res://tiles/ground_tileset.tres" type="TileSet" id=8]
 [ext_resource path="res://tiles/fence_tiles.tres" type="TileSet" id=9]
@@ -32,20 +32,24 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Flock" type="YSort" parent="Objects"]
-position = Vector2( 27.42, 108.683 )
-script = ExtResource( 6 )
+[node name="Flock" parent="Objects" instance=ExtResource( 4 )]
+position = Vector2( 24.9452, 108.69 )
+chickens = 7
 chickenScene = ExtResource( 7 )
 
 [node name="Chicken1" parent="Objects" instance=ExtResource( 7 )]
 position = Vector2( -42, 161 )
 
-[node name="Player" parent="Objects" instance=ExtResource( 3 )]
-position = Vector2( 12.3223, 112.903 )
+[node name="Player" parent="Objects" groups=[
+"Player",
+] instance=ExtResource( 3 )]
+position = Vector2( -56.8077, 135.946 )
 speed = 30
 
 [node name="PixelPerfectCamera" type="Camera2D" parent="Objects"]
 current = true
+zoom = Vector2( 0.2, 0.2 )
+editor_draw_screen = false
 script = ExtResource( 5 )
 
 [node name="BehaviorTree" parent="." instance=ExtResource( 2 )]

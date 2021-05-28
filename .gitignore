@@ -14,3 +14,6 @@ data_*/
 bin/
 build/
 lib/
+
+tests/results.xml
+

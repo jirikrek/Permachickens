@@ -1,7 +1,7 @@
 extends _BaseBehaviorTest
 
 
-func test_cohesion_pair():
+func test_stay_in_radius():
 	blackboard.set_data("nearbyHens", nearbyHens)
 	var vector := get_result()
 	asserts.is_equal(vector, Vector2(2,2))

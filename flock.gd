@@ -1,20 +1,40 @@
+tool
 extends Node2D
 
-export var chickens = 5
+export var chickens := 5 setget set_chickens
 export var chickenScene : Resource
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+export var radius := 40 setget set_radius
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	regenerate()
+
+
+func regenerate():
+	remove_hens()
+	create_hens()
+
+
+func remove_hens():
+	for child in get_children():
+		if child.is_in_group("Hens"):
+			remove_child(child)
+		
+
+func create_hens():
+	if chickenScene == null:
+		return
+		
 	for i in range(chickens):
 		var chick:CollisionObject2D = chickenScene.instance()
-		chick.position = Vector2(randf() * 40 - 20, randf() * 40 - 20)
+		chick.position = Vector2(randf() * radius - radius / 2, randf() * radius - radius / 2)
 		add_child(chick)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func set_radius(new_radius):
+	radius = new_radius
+	regenerate()
+
+
+func set_chickens(new_chickens):
+	chickens = new_chickens
+	regenerate()

@@ -1,9 +1,30 @@
 {
+	"res://tests/base_behavior_test.gd": {
+		"path": "res://tests/base_behavior_test.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/stay_in_radius_tests.gd": {
+		"path": "res://tests/stay_in_radius_tests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
 	"res://tests/cohesion_tests.gd": {
 		"path": "res://tests/cohesion_tests.gd",
 		"tags": [
 
 		],
 		"passing": true
+	},
+	"res://tests/needs/thirst_tests.gd": {
+		"path": "res://tests/needs/thirst_tests.gd",
+		"tags": [
+
+		],
+		"passing": false
 	}
 }
