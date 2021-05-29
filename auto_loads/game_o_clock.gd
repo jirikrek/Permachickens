@@ -13,7 +13,7 @@ func _ready():
 	_next_minute_ticks = OS.get_ticks_msec() + game_minute_real_milis
 	print_debug("One game minute in real miliseconds: %s" % game_minute_real_milis)
 
-func _process(delta):
+func _process(_delta):
 	var currentTime = OS.get_ticks_msec()
 	if currentTime >= _next_minute_ticks:
 		emit_signal("minute_tick")

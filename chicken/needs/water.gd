@@ -1,5 +1,5 @@
 extends BaseNeed
-class_name Thirst
+class_name Water
 
 # How many times a day a hen would die from dehydration.
 export var thirstiness = 0.5
@@ -13,6 +13,7 @@ var _value := 0.0
 
 func _init():
 	GameOClock.connect("minute_tick", self, "on_game_minute_tick")
+
 
 func drink(resource):
 	_value -= DRINKING_SPEED

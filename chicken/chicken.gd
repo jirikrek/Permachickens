@@ -1,7 +1,12 @@
 extends KinematicBody2D
 class_name Chicken
-var thirst := Thirst.new()
+var water := Water.new()
+var food := Food.new()
 
 
 func drink(resource):
-	thirst.drink(resource)
+	water.drink(resource)
+
+
+func eat(resource):
+	food.eat(resource)

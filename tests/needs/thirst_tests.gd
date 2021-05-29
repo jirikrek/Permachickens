@@ -1,12 +1,12 @@
 extends WAT.Test
 
-var thirst: Thirst
+var water: Water
 
 func pre():
-	thirst = Thirst.new()
+	water = Water.new()
 
 func test_thirst_growth():
-	print(GameTime.get_day_delta(1))
-	thirst.update(1)
-	asserts.is_greater_than(thirst._value, 0)
+	print(GameOClock.get_day_delta(1))
+	water.update(1)
+	asserts.is_greater_than(water._value, 0)
 	
