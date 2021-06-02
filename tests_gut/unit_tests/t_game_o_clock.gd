@@ -21,6 +21,9 @@ func before_each():
 	game_o_clock = partial_double("res://auto_loads/game_o_clock.gd").new()
 	game_o_clock._real_time_provider = real_world_time
 	set_time(100)
+	
+	# start the clock
+	game_o_clock.run()
 
 	
 func after_each():
@@ -35,9 +38,6 @@ func test_test_setup():
 func test_minute_signal():
 	watch_signals(game_o_clock)
 	
-	# start the clock
-	game_o_clock.run()
-	
 	game_o_clock.recalculate()
 	assert_signal_not_emitted(game_o_clock, "minute_tick")
 	
@@ -47,9 +47,6 @@ func test_minute_signal():
 	
 
 func test_two_minutes():
-	# start the clock
-	game_o_clock.run()
-	
 	game_o_clock.recalculate()
 	watch_signals(game_o_clock)
 
@@ -63,3 +60,12 @@ func test_two_minutes():
 
 	assert_signal_emit_count(game_o_clock, "minute_tick", 2)
 
+
+func test_two_minutes_in_one_run():
+	game_o_clock.recalculate()
+	watch_signals(game_o_clock)
+	
+	forward_time(game_o_clock.game_minute_real_msec * 2)
+	game_o_clock.recalculate()
+	
+	assert_signal_emit_count(game_o_clock, "minute_tick", 2)

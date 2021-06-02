@@ -204,10 +204,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://chicken/needs/water.gd"
 }, {
-"base": "WATTest",
+"base": "GUTTest",
 "class": "_BaseBehaviorTest",
 "language": "GDScript",
-"path": "res://tests_WAT/base_behavior_test.gd"
+"path": "res://tests_gut/unit_tests/behavior/_base_behavior.gd"
 } ]
 _global_script_class_icons={
 "BTAlways": "res://addons/behavior_tree/icons/btalways.svg",
