@@ -5,7 +5,7 @@ signal minute_tick()
 
 # Number of minutes in a normal day (it's 60 * 24)
 const MINUTES_IN_DAY = 1440
-export var game_day_real_seconds = 60 # seconds
+export var game_day_real_seconds = 20 # seconds
 var game_minute_real_msec: int = floor(float(game_day_real_seconds) / MINUTES_IN_DAY * 1000)
 var _next_minute_ticks = 0 setget set_next_minute_ticks 
 var _real_time_provider
@@ -13,7 +13,7 @@ var _real_time_provider
 
 func set_next_minute_ticks(value):
 	_next_minute_ticks = value
-	print("next_minute_ticks=%.4f" % _next_minute_ticks)
+
 
 func _ready():
 	set_process(false)
@@ -31,7 +31,6 @@ func run():
 # Emits time signals when necessary.
 func recalculate():
 	var current_time = _real_time_provider.get_ticks_msec()
-	print("GameOClock.current_real_time=%d" % current_time)
 	if current_time >= _next_minute_ticks:
 		emit_signal("minute_tick")
 		set_next_minute_ticks(_next_minute_ticks + game_minute_real_msec)
