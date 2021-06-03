@@ -2,7 +2,7 @@ extends BTLeaf
 class_name FindNodeFromGroup
 
 export var group: String
-export var result: String
+export var result_key: String
 
 
 func _tick(agent: Node, blackboard: Blackboard) -> bool:
@@ -11,5 +11,5 @@ func _tick(agent: Node, blackboard: Blackboard) -> bool:
 	if nodes.size() <= 0:
 		return fail()
 	
-	blackboard.set_data(result, nodes[0])
+	blackboard.set_data(result_key, nodes[0])
 	return succeed()

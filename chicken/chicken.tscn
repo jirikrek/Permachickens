@@ -46,14 +46,27 @@ _agent = NodePath("..")
 [node name="BTSequence" type="Node" parent="BehaviorTree"]
 script = ExtResource( 4 )
 
-[node name="FindNodeFromGroup" type="Node" parent="BehaviorTree/BTSequence"]
+[node name="MoveTowardsPlayerSequence" type="Node" parent="BehaviorTree/BTSequence"]
+script = ExtResource( 4 )
+
+[node name="FindNodeFromGroup" type="Node" parent="BehaviorTree/BTSequence/MoveTowardsPlayerSequence"]
 script = ExtResource( 7 )
 group = "Player"
-result = "target"
+result_key = "target"
 
-[node name="MoveTowards" type="Node" parent="BehaviorTree/BTSequence"]
+[node name="MoveTowards" type="Node" parent="BehaviorTree/BTSequence/MoveTowardsPlayerSequence"]
 script = ExtResource( 8 )
 target_key = "target"
+
+[node name="MoveTowardsResource" type="Node" parent="BehaviorTree/BTSequence"]
+script = ExtResource( 4 )
+
+[node name="FindNodeFromGroup" type="Node" parent="BehaviorTree/BTSequence/MoveTowardsResource"]
+script = ExtResource( 7 )
+group = "Water"
+
+[node name="MoveTowards" type="Node" parent="BehaviorTree/BTSequence/MoveTowardsResource"]
+script = ExtResource( 8 )
 
 [node name="Blackboard" type="Node" parent="."]
 script = ExtResource( 2 )

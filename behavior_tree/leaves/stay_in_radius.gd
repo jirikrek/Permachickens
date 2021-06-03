@@ -1,4 +1,6 @@
 extends BTLeaf
+class_name StayInRadius
+
 export var center : Vector2
 export var radius = 15;
 export var result : Vector2
@@ -18,11 +20,12 @@ export var result : Vector2
 
 
 func _tick(agent: Node, blackboard: Blackboard) -> bool:
-	var centerOffset = center - agent.position
-	var t = centerOffset.magnitude / radius
+	var centerOffset:Vector2 = center - agent.position
+	var t = centerOffset.length() / radius
 	if t < 0.9:
 		#blackboard.set_data()
 		result = Vector2.ZERO
 	else:
 		result = centerOffset * t * t
+	blackboard.set_data("result", result)
 	return succeed()

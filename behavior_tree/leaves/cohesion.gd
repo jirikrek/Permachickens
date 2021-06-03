@@ -27,16 +27,17 @@ export var result : Vector2
 #        return TaskStatus.Success;
 #    }
 
+
 func _tick(agent: Node, blackboard: Blackboard) -> bool:
-	var nearbyHens = blackboard.get_data("nearbyHens")
+	var nearby_hens = blackboard.get_data("nearbyHens")
 	var result = Vector2.ZERO
 	
-	for hen in nearbyHens:
-		result += hen.position;
+	for hen in nearby_hens:
+		result += hen.position
 	
-	result /= nearbyHens.size()
+	result /= nearby_hens.size()
 
 	# create offset from agent position
-	result -= agent.position;
+	result -= agent.position
 	blackboard.set_data("result", result)
 	return succeed()
