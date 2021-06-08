@@ -3,7 +3,7 @@ class_name Cohesion
 
 export var center : Vector2
 export var radius = 15;
-export var result : Vector2
+
 #    public SharedTransformList nearbyFowls;
 #    [RequiredField]
 #    public SharedVector2 result;

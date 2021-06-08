@@ -1,11 +1,13 @@
 tool
 extends Node
+class_name GameOClock
 
-signal minute_tick()
+signal minute_tick
 
 # Number of minutes in a normal day (it's 60 * 24)
 const MINUTES_IN_DAY = 1440
-export var game_day_real_seconds = 5 # seconds
+const MINUTES_IN_YEAR = 365 * MINUTES_IN_DAY
+export var game_day_real_seconds = 20 # seconds
 var game_minute_real_msec: int = floor(float(game_day_real_seconds) / MINUTES_IN_DAY * 1000)
 var _last_minute_ticks = 0 setget set_last_minute_ticks 
 var _real_time_provider

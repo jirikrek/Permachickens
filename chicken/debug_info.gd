@@ -20,6 +20,10 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	hide_indicators()
 
+func _input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.pressed:
+		print(_chicken.describe())
+
 
 func hide_indicators():
 	$WaterNeed.hide()

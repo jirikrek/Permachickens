@@ -30,6 +30,11 @@ _global_script_classes=[ {
 "path": "res://addons/behavior_tree/src/btnodes/bt_decorator.gd"
 }, {
 "base": "BTDecorator",
+"class": "BTFoodUtility",
+"language": "GDScript",
+"path": "res://behavior_tree/decorators/bt_food_utility.gd"
+}, {
+"base": "BTDecorator",
 "class": "BTGuard",
 "language": "GDScript",
 "path": "res://addons/behavior_tree/src/btnodes/decorators/bt_guard.gd"
@@ -38,6 +43,11 @@ _global_script_classes=[ {
 "class": "BTLeaf",
 "language": "GDScript",
 "path": "res://addons/behavior_tree/src/btnodes/bt_leaf.gd"
+}, {
+"base": "BTDecorator",
+"class": "BTNeedUtility",
+"language": "GDScript",
+"path": "res://behavior_tree/decorators/bt_need_utility.gd"
 }, {
 "base": "Node",
 "class": "BTNode",
@@ -92,12 +102,22 @@ _global_script_classes=[ {
 "base": "GUTTest",
 "class": "BaseBehaviorTest",
 "language": "GDScript",
-"path": "res://tests_gut/unit_tests/behavior/_base_behavior.gd"
+"path": "res://tests_gut/unit_tests/behavior/_base_behavior_test.gd"
+}, {
+"base": "WATTest",
+"class": "BaseBehaviorTestWAT",
+"language": "GDScript",
+"path": "res://tests_WAT/base_behavior_test.gd"
 }, {
 "base": "Reference",
 "class": "BaseNeed",
 "language": "GDScript",
 "path": "res://chicken/needs/base_need.gd"
+}, {
+"base": "GUTTest",
+"class": "BaseOClockTest",
+"language": "GDScript",
+"path": "res://tests_gut/unit_tests/_base_o_clock.gd"
 }, {
 "base": "Node",
 "class": "BehaviorTree",
@@ -119,6 +139,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://behavior_tree/leaves/cohesion.gd"
 }, {
+"base": "GraphNode",
+"class": "CommonNode",
+"language": "GDScript",
+"path": "res://addons/project_map/pm_common_node.gd"
+}, {
+"base": "BTLeaf",
+"class": "Drink",
+"language": "GDScript",
+"path": "res://behavior_tree/leaves/drink.gd"
+}, {
+"base": "BTLeaf",
+"class": "Eat",
+"language": "GDScript",
+"path": "res://behavior_tree/leaves/eat.gd"
+}, {
 "base": "BTLeaf",
 "class": "FindNodeFromGroup",
 "language": "GDScript",
@@ -134,6 +169,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/gut/test.gd"
 }, {
+"base": "Node",
+"class": "GameOClock",
+"language": "GDScript",
+"path": "res://common/scripts/game_o_clock.gd"
+}, {
 "base": "EditorVCSInterface",
 "class": "GitAPI",
 "language": "NativeScript",
@@ -143,6 +183,11 @@ _global_script_classes=[ {
 "class": "Ignorer",
 "language": "GDScript",
 "path": "res://addons/snake_case/ignorer.gd"
+}, {
+"base": "BaseNeed",
+"class": "LifeLength",
+"language": "GDScript",
+"path": "res://chicken/needs/life_length.gd"
 }, {
 "base": "Resource",
 "class": "LocalTime",
@@ -209,6 +254,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/GdCommons/DateTime/src/TimeUnit.gd"
 }, {
+"base": "BTComposite",
+"class": "UtilitySelector",
+"language": "GDScript",
+"path": "res://behavior_tree/composites/utility_selector.gd"
+}, {
 "base": "BaseNeed",
 "class": "Water",
 "language": "GDScript",
@@ -219,8 +269,10 @@ _global_script_class_icons={
 "BTComposite": "res://addons/behavior_tree/icons/btcomposite.svg",
 "BTConditional": "res://addons/behavior_tree/icons/btconditional.png",
 "BTDecorator": "res://addons/behavior_tree/icons/btdecorator.svg",
+"BTFoodUtility": "",
 "BTGuard": "res://addons/behavior_tree/icons/btguard.svg",
 "BTLeaf": "res://addons/behavior_tree/icons/btleaf.svg",
+"BTNeedUtility": "",
 "BTNode": "res://addons/behavior_tree/icons/btnode.svg",
 "BTParallel": "res://addons/behavior_tree/icons/btparallel.svg",
 "BTRandomSelector": "res://addons/behavior_tree/icons/btrndselector.svg",
@@ -232,16 +284,23 @@ _global_script_class_icons={
 "BTSequence": "res://addons/behavior_tree/icons/btsequence.svg",
 "BTWait": "res://addons/behavior_tree/icons/btwait.svg",
 "BaseBehaviorTest": "",
+"BaseBehaviorTestWAT": "",
 "BaseNeed": "",
+"BaseOClockTest": "",
 "BehaviorTree": "res://addons/behavior_tree/icons/bt.svg",
 "Blackboard": "res://addons/behavior_tree/icons/blackboard.svg",
 "Chicken": "",
 "Cohesion": "",
+"CommonNode": "",
+"Drink": "",
+"Eat": "",
 "FindNodeFromGroup": "",
 "Food": "",
 "GUTTest": "",
+"GameOClock": "",
 "GitAPI": "",
 "Ignorer": "",
+"LifeLength": "",
 "LocalTime": "",
 "LocalTimeTest": "",
 "MoveInDirection": "",
@@ -255,6 +314,7 @@ _global_script_class_icons={
 "SnakeCase": "",
 "StayInRadius": "",
 "TimeUnit": "",
+"UtilitySelector": "res://addons/behavior_tree/icons/btsequence.svg",
 "Water": ""
 }
 
@@ -280,7 +340,13 @@ config/icon="res://icon.png"
 
 [autoload]
 
-GameOClock="*res://auto_loads/game_o_clock.gd"
+Globals="*res://auto_loads/globals.gd"
+
+[debug]
+
+gdscript/warnings/unused_argument=false
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
 
 [display]
 
