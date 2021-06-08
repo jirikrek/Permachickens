@@ -20,10 +20,17 @@ func test_all_needs_listen_for_minute_ticks():
 		assert_connected(Globals.game_o_clock, need, "minute_tick")
 
 
-func test_chicken_listens_to_death_signal():
+func test_chicken_listens_to_died_signals_of_every_need():
 	for need in chicken.needs:
 		assert_connected(need, chicken, "died")
 	
+
+func test_chicken_disconnects_all_signals_upon_death():
+	chicken.die()
+	for need in chicken.needs:
+		assert_eq(need.get_incoming_connections().size(), 0)
+	assert_eq(chicken.get_incoming_connections().size(), 0)
+
 
 func test_do_not_update_needs_when_dead():
 	var water = chicken.water._value

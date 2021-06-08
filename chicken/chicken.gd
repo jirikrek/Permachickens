@@ -72,7 +72,7 @@ func get_age():
 	return life_length._value
 
 
-func describe():
+func _to_string():
 	var desc = "Chicken: " + name + "\n"
 	for need in needs:
 		desc += str(need)
