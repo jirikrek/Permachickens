@@ -11,20 +11,18 @@ func before_each():
 
 
 func after_each():
-	.after_each()
 	chicken.free()
+	.after_each()
 
 
-# TODO: It seems like the assert_connected has bug. Implement my own version.
-func assert_signal_connected():
-	pass
-
-func test_all_needs_listen_for_minute_ticks(need=use_parameters(chicken.needs)):
-	assert_connected(Globals.game_o_clock, need, "minute_tick")
+func test_all_needs_listen_for_minute_ticks():
+	for need in chicken.needs:
+		assert_connected(Globals.game_o_clock, need, "minute_tick")
 
 
-func test_chicken_listens_to_death_signal(need=use_parameters(chicken.needs)):
-	assert_connected(need, chicken, "died")
+func test_chicken_listens_to_death_signal():
+	for need in chicken.needs:
+		assert_connected(need, chicken, "died")
 	
 
 func test_do_not_update_needs_when_dead():
