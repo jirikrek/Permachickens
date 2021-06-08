@@ -9,7 +9,7 @@ var game_o_clock
 func set_time(msec):
 	__current_time = msec
 	stub(real_world_time, "get_ticks_msec").to_return(__current_time)
-	gut.p("current_time=%d" % __current_time)
+	gut.p("current_time=%d" % __current_time, gut.LOG_LEVEL_ALL_ASSERTS)
 
 
 func forward_time(msec):
