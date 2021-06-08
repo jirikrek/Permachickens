@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chicken_sprite_sheet_dark_brown.png-9a0270e4349823bcfadd3361dc9ea929.stex"
+path="res://.import/chicken_sprite_sheet_dark_brown.png-72b87daa3887122168c4675b7f1ec09a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chicken/chicken_sprite_sheet_dark_brown.png"
-dest_files=[ "res://.import/chicken_sprite_sheet_dark_brown.png-9a0270e4349823bcfadd3361dc9ea929.stex" ]
+source_file="res://hen/chicken_sprite_sheet_dark_brown.png"
+dest_files=[ "res://.import/chicken_sprite_sheet_dark_brown.png-72b87daa3887122168c4675b7f1ec09a.stex" ]
 
 [params]
 

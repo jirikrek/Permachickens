@@ -12,7 +12,7 @@ class UtilitySorter:
 			return true
 		return false
 
-func utilise_children(agent:Chicken):
+func utilise_children(agent:Hen):
 	utilised_children.clear()
 	for child in children:
 		if child.has_method("get_utility"):

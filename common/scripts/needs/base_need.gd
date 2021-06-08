@@ -1,7 +1,8 @@
 extends Reference 
 class_name BaseNeed
 
-signal died
+signal urgency_max
+
 var max_value = 1.0
 var min_value = 0.0
 
@@ -10,7 +11,7 @@ var _value := 0.0 setget set_need
 
 	
 func _die():
-	emit_signal("died")
+	emit_signal("urgency_max")
 
 func set_need(new_need_value):
 	_value = new_need_value

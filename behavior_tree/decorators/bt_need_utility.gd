@@ -1,7 +1,7 @@
 extends BTDecorator
 class_name BTNeedUtility
-export var chicken_path: NodePath
+export var hen_path: NodePath
 
-func get_utility(agent:Chicken):
+func get_utility(agent:Hen):
 	return agent.water._value
 

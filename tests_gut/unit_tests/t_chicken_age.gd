@@ -1,7 +1,7 @@
 extends BaseOClockTest
 
-var chicken_scene = load("res://chicken/chicken.tscn")
-var chicken: Chicken
+var hen_scene = load("res://hen/hen.tscn")
+var hen: Hen
 
 
 func before_each():
@@ -10,13 +10,13 @@ func before_each():
 
 
 func test_life_span_does_not_go_below_zero():
-	stub(Globals.random, "randfn").to_return(Chicken.MIN_AGE - 0.5)
-	chicken = autofree(chicken_scene.instance())
-	assert_true(chicken.life_span >= Chicken.MIN_AGE * GameOClock.MINUTES_IN_YEAR)
+	stub(Globals.random, "randfn").to_return(Hen.MIN_AGE - 0.5)
+	hen = autofree(hen_scene.instance())
+	assert_true(hen.life_span >= Hen.MIN_AGE * GameOClock.MINUTES_IN_YEAR)
 
 
 func test_life_span_is_not_bigger_then_fifteen():
-	stub(Globals.random, "randfn").to_return(Chicken.MAX_AGE + .1)
-	chicken = autofree(chicken_scene.instance())
-	assert_true(chicken.life_span == Chicken.MAX_AGE * GameOClock.MINUTES_IN_YEAR)
+	stub(Globals.random, "randfn").to_return(Hen.MAX_AGE + .1)
+	hen = autofree(hen_scene.instance())
+	assert_true(hen.life_span == Hen.MAX_AGE * GameOClock.MINUTES_IN_YEAR)
 

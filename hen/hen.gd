@@ -1,5 +1,11 @@
 extends KinematicBody2D
-class_name Chicken
+class_name Hen
+
+const EATING_SPEED = 0.003
+const DRINKING_SPEED = 0.004
+const MAX_AGE = 12.0
+const MIN_AGE = 0.0
+
 var water := Water.new()
 var food := Food.new()
 var life_length: LifeLength
@@ -8,10 +14,6 @@ var needs
 var alive = true
 var age setget set_age, get_age		# current life length in game minutes 
 var life_span setget set_life_span	# total length of life in game minutes
-const EATING_SPEED = 0.003
-const DRINKING_SPEED = 0.004
-const MAX_AGE = 15.0
-const MIN_AGE = 0.0
 
 func _init():
 	life_span = generate_life_span_years() * GameOClock.MINUTES_IN_YEAR
@@ -26,13 +28,13 @@ func _ready():
 func _connect_needs_listeners():
 	for need in needs:
 		Globals.game_o_clock.connect("minute_tick", need, "on_game_minute_tick")
-		need.connect("died", self, "die")
+		need.connect("urgency_max", self, "die")
 
 
 func _disconnect_needs_listeners():
 	for need in needs:
 		Globals.game_o_clock.disconnect("minute_tick", need, "on_game_minute_tick")
-		need.disconnect("died", self, "die")
+		need.disconnect("urgency_max", self, "die")
 
 
 func drink(resource):

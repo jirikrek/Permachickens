@@ -6,7 +6,7 @@ var vp
 var scaling_factor = 1
 
 func _ready():
-	follow = $"../Player"
+	follow = $"../Farmer"
 	vp = get_viewport()
 	#vp.connect("size_changed", self, "on_vp_size_change")
 	#on_vp_size_change()

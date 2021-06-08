@@ -2,19 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chicken_sprite_sheet_light_brown.png-f542bb2d837c95cecd751b46c8c3b19a.stex"
+path="res://.import/8x8critters.png-01d0c0aa1a33dd7cb750a863656a695e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chicken/chicken_sprite_sheet_light_brown.png"
-dest_files=[ "res://.import/chicken_sprite_sheet_light_brown.png-f542bb2d837c95cecd751b46c8c3b19a.stex" ]
+source_file="res://hen/8x8critters.png"
+dest_files=[ "res://.import/8x8critters.png-01d0c0aa1a33dd7cb750a863656a695e.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
@@ -24,7 +24,7 @@ flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false

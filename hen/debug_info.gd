@@ -1,16 +1,16 @@
 extends Area2D
 
-export var chicken_path: NodePath
-var _chicken: Chicken
+export var hen_path: NodePath
+var _hen: Hen
 
 func _ready():
-	_chicken = get_node(chicken_path)	
+	_hen = get_node(hen_path)	
 	hide_indicators()
 
 
 func _process(delta):
-	$WaterNeed.value = 1 - _chicken.water._value
-	$FoodNeed.value = 1 - _chicken.food._value
+	$WaterNeed.value = 1 - _hen.water._value
+	$FoodNeed.value = 1 - _hen.food._value
 
 
 func _on_mouse_entered():
@@ -20,9 +20,10 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	hide_indicators()
 
+
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
-		print(_chicken.describe())
+		print(_hen)
 
 
 func hide_indicators():

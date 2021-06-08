@@ -107,7 +107,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "BaseNeed",
 "language": "GDScript",
-"path": "res://chicken/needs/base_need.gd"
+"path": "res://common/scripts/needs/base_need.gd"
 }, {
 "base": "GUTTest",
 "class": "BaseOClockTest",
@@ -123,11 +123,6 @@ _global_script_classes=[ {
 "class": "Blackboard",
 "language": "GDScript",
 "path": "res://addons/behavior_tree/src/blackboard.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "Chicken",
-"language": "GDScript",
-"path": "res://chicken/chicken.gd"
 }, {
 "base": "BTLeaf",
 "class": "Cohesion",
@@ -149,6 +144,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://behavior_tree/leaves/eat.gd"
 }, {
+"base": "BaseNeed",
+"class": "Energy",
+"language": "GDScript",
+"path": "res://common/scripts/needs/energy.gd"
+}, {
 "base": "BTLeaf",
 "class": "FindNodeFromGroup",
 "language": "GDScript",
@@ -157,7 +157,7 @@ _global_script_classes=[ {
 "base": "BaseNeed",
 "class": "Food",
 "language": "GDScript",
-"path": "res://chicken/needs/food.gd"
+"path": "res://common/scripts/needs/food.gd"
 }, {
 "base": "Control",
 "class": "GUT",
@@ -179,6 +179,11 @@ _global_script_classes=[ {
 "language": "NativeScript",
 "path": "res://git_api.gdns"
 }, {
+"base": "KinematicBody2D",
+"class": "Hen",
+"language": "GDScript",
+"path": "res://hen/hen.gd"
+}, {
 "base": "Reference",
 "class": "Ignorer",
 "language": "GDScript",
@@ -187,7 +192,7 @@ _global_script_classes=[ {
 "base": "BaseNeed",
 "class": "LifeLength",
 "language": "GDScript",
-"path": "res://chicken/needs/life_length.gd"
+"path": "res://common/scripts/needs/life_length.gd"
 }, {
 "base": "Resource",
 "class": "LocalTime",
@@ -217,7 +222,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "PlayerClass",
 "language": "GDScript",
-"path": "res://player.gd"
+"path": "res://farmer/farmer.gd"
 }, {
 "base": "Reference",
 "class": "RealWorldTime",
@@ -262,7 +267,7 @@ _global_script_classes=[ {
 "base": "BaseNeed",
 "class": "Water",
 "language": "GDScript",
-"path": "res://chicken/needs/water.gd"
+"path": "res://common/scripts/needs/water.gd"
 } ]
 _global_script_class_icons={
 "BTAlways": "res://addons/behavior_tree/icons/btalways.svg",
@@ -288,17 +293,18 @@ _global_script_class_icons={
 "BaseOClockTest": "",
 "BehaviorTree": "res://addons/behavior_tree/icons/bt.svg",
 "Blackboard": "res://addons/behavior_tree/icons/blackboard.svg",
-"Chicken": "",
 "Cohesion": "",
 "CommonNode": "",
 "Drink": "",
 "Eat": "",
+"Energy": "",
 "FindNodeFromGroup": "",
 "Food": "",
 "GUT": "",
 "GUTTest": "",
 "GameOClock": "",
 "GitAPI": "",
+"Hen": "",
 "Ignorer": "",
 "LifeLength": "",
 "LocalTime": "",

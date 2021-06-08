@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
-[ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://farmer/farmer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://flock/flock.tscn" type="PackedScene" id=4]
 [ext_resource path="res://camerfix.gd" type="Script" id=5]
-[ext_resource path="res://chicken/chicken.tscn" type="PackedScene" id=7]
+[ext_resource path="res://hen/hen.tscn" type="PackedScene" id=7]
 [ext_resource path="res://tiles/ground_tileset.tres" type="TileSet" id=8]
 [ext_resource path="res://tiles/fence_tiles.tres" type="TileSet" id=9]
 
@@ -45,7 +45,7 @@ chickenScene = ExtResource( 7 )
 [node name="Chicken1" parent="Level/Objects" instance=ExtResource( 7 )]
 position = Vector2( -42, 161 )
 
-[node name="Player" parent="Level/Objects" groups=[
+[node name="Farmer" parent="Level/Objects" groups=[
 "Player",
 ] instance=ExtResource( 3 )]
 position = Vector2( -56.8077, 135.946 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chicken_sprite_sheet.png-8787983c083755b617c5ad8d09647c59.stex"
+path="res://.import/chicken_sprite_sheet.png-2083139721e6b9f3b1e71b88360308b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chicken/chicken_sprite_sheet.png"
-dest_files=[ "res://.import/chicken_sprite_sheet.png-8787983c083755b617c5ad8d09647c59.stex" ]
+source_file="res://hen/chicken_sprite_sheet.png"
+dest_files=[ "res://.import/chicken_sprite_sheet.png-2083139721e6b9f3b1e71b88360308b5.stex" ]
 
 [params]
 
