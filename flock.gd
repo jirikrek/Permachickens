@@ -25,9 +25,9 @@ func create_hens():
 		return
 		
 	for i in range(chickens):
-		var chick:CollisionObject2D = chickenScene.instance()
-		chick.position = Vector2(randf() * radius - radius / 2, randf() * radius - radius / 2)
-		add_child(chick)
+		var chick:Node2D = chickenScene.instance()
+		chick.position = position + Vector2(randf() * radius - radius / 2, randf() * radius - radius / 2)
+		get_parent().call_deferred("add_child", chick)
 
 
 func set_radius(new_radius):
