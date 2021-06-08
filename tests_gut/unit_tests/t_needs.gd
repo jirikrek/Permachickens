@@ -9,7 +9,7 @@ var needs
 func before_each():
 	water = Water.new()
 	food = Food.new()
-	life_length = LifeLength.new(3.0 * GameOClock.MINUTES_IN_YEAR)
+	life_length = LifeLength.new(100)
 	needs = [water, food, life_length]
 
 
