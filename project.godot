@@ -104,11 +104,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://tests_gut/unit_tests/behavior/_base_behavior_test.gd"
 }, {
-"base": "WATTest",
-"class": "BaseBehaviorTestWAT",
-"language": "GDScript",
-"path": "res://tests_WAT/base_behavior_test.gd"
-}, {
 "base": "Reference",
 "class": "BaseNeed",
 "language": "GDScript",
@@ -284,7 +279,6 @@ _global_script_class_icons={
 "BTSequence": "res://addons/behavior_tree/icons/btsequence.svg",
 "BTWait": "res://addons/behavior_tree/icons/btwait.svg",
 "BaseBehaviorTest": "",
-"BaseBehaviorTestWAT": "",
 "BaseNeed": "",
 "BaseOClockTest": "",
 "BehaviorTree": "res://addons/behavior_tree/icons/bt.svg",
