@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://addons/behavior_tree/src/behavior_tree.gd" type="Script" id=1]
 [ext_resource path="res://addons/behavior_tree/src/blackboard.gd" type="Script" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://addons/behavior_tree/src/btnodes/composites/bt_sequence.gd" type="Script" id=5]
 [ext_resource path="res://behavior_tree/leaves/find_node_from_group.gd" type="Script" id=6]
 [ext_resource path="res://hen/hen.gd" type="Script" id=7]
-[ext_resource path="res://hen/progress_indicator/progress_indicator.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ui/tiny_progress_bar/progress_indicator.tscn" type="PackedScene" id=8]
 [ext_resource path="res://behavior_tree/composites/utility_selector.gd" type="Script" id=9]
 [ext_resource path="res://behavior_tree/leaves/move_towards.gd" type="Script" id=10]
 [ext_resource path="res://addons/behavior_tree/src/btnodes/decorators/bt_always.gd" type="Script" id=11]
@@ -15,6 +15,7 @@
 [ext_resource path="res://behavior_tree/leaves/eat.gd" type="Script" id=13]
 [ext_resource path="res://behavior_tree/decorators/bt_need_utility.gd" type="Script" id=14]
 [ext_resource path="res://hen/debug_info.gd" type="Script" id=15]
+[ext_resource path="res://ui/progress_bar/need_progress_bar.gd" type="Script" id=16]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 2.0
@@ -113,10 +114,18 @@ shape = SubResource( 2 )
 [node name="WaterNeed" parent="DebugInfo" instance=ExtResource( 8 )]
 margin_top = -9.0
 margin_bottom = -6.0
+max_value = 100.0
+step = 1.0
+value = 40.0
+script = ExtResource( 16 )
 
 [node name="FoodNeed" parent="DebugInfo" instance=ExtResource( 8 )]
 margin_top = -11.0
 margin_bottom = -13.0
+max_value = 100.0
+step = 1.0
+value = 40.0
+script = ExtResource( 16 )
 
 [connection signal="mouse_entered" from="DebugInfo" to="DebugInfo" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DebugInfo" to="DebugInfo" method="_on_mouse_exited"]

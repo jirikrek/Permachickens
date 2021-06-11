@@ -1,12 +1,15 @@
 extends KinematicBody2D
-class_name PlayerClass
+class_name Farmer
 var move := Vector2.ZERO
 var iso = Vector2(1, 0.5)
-export var speed = 20
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
+var energy := Energy.new()
+
+export var speed = 20
+
+func _ready():
+	Globals.game_o_clock.connect("minute_tick", energy, "on_game_minute_tick")
+	pass
 
 func _process(delta):
 	move = Vector2.ZERO

@@ -149,6 +149,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://common/scripts/needs/energy.gd"
 }, {
+"base": "KinematicBody2D",
+"class": "Farmer",
+"language": "GDScript",
+"path": "res://farmer/farmer.gd"
+}, {
 "base": "BTLeaf",
 "class": "FindNodeFromGroup",
 "language": "GDScript",
@@ -218,11 +223,6 @@ _global_script_classes=[ {
 "class": "OptionsDialog",
 "language": "GDScript",
 "path": "res://addons/snake_case/options_dialog.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "PlayerClass",
-"language": "GDScript",
-"path": "res://farmer/farmer.gd"
 }, {
 "base": "Reference",
 "class": "RealWorldTime",
@@ -298,6 +298,7 @@ _global_script_class_icons={
 "Drink": "",
 "Eat": "",
 "Energy": "",
+"Farmer": "",
 "FindNodeFromGroup": "",
 "Food": "",
 "GUT": "",
@@ -312,7 +313,6 @@ _global_script_class_icons={
 "MoveInDirection": "",
 "MoveTowards": "",
 "OptionsDialog": "",
-"PlayerClass": "",
 "RealWorldTime": "",
 "Result": "",
 "ResultTest": "",
@@ -361,7 +361,7 @@ window/size/height=180
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Todo_Manager/plugin.cfg", "res://addons/behavior_tree/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/snake_case/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Todo_Manager/plugin.cfg", "res://addons/behavior_tree/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/snake_case/plugin.cfg" )
 
 [gdnative]
 

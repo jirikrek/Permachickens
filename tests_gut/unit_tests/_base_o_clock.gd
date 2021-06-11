@@ -4,12 +4,13 @@ class_name BaseOClockTest
 var original_time_provider
 var real_world_time
 var __current_time := 0 setget set_time
-var game_o_clock
+var game_o_clock: GameOClock
 
 func set_time(msec):
 	__current_time = msec
 	stub(real_world_time, "get_ticks_msec").to_return(__current_time)
 	gut.p("current_time=%d" % __current_time, gut.LOG_LEVEL_ALL_ASSERTS)
+	game_o_clock.recalculate()
 
 
 func forward_time(msec):

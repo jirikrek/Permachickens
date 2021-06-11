@@ -1,15 +1,23 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://ui/ui1.png" type="Texture" id=2]
 [ext_resource path="res://farmer/farmer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://flock/flock.tscn" type="PackedScene" id=4]
 [ext_resource path="res://camerfix.gd" type="Script" id=5]
+[ext_resource path="res://ui/gui_controller.gd" type="Script" id=6]
 [ext_resource path="res://hen/hen.tscn" type="PackedScene" id=7]
 [ext_resource path="res://tiles/ground_tileset.tres" type="TileSet" id=8]
 [ext_resource path="res://tiles/fence_tiles.tres" type="TileSet" id=9]
+[ext_resource path="res://ui/progress_bar/energy_bar.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ui/player_indicator.gd" type="Script" id=11]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 4.0
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 2, 260, 26, 24 )
 
 [node name="PermaChicks" type="Node"]
 script = ExtResource( 1 )
@@ -78,3 +86,22 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Objects/Food"]
 shape = SubResource( 1 )
+
+[node name="GUI" type="CanvasLayer" parent="."]
+script = ExtResource( 6 )
+
+[node name="FarmerIndicator" type="HBoxContainer" parent="GUI"]
+margin_left = 8.0
+margin_top = 8.0
+custom_constants/separation = 0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Head" type="TextureRect" parent="GUI/FarmerIndicator"]
+margin_right = 26.0
+margin_bottom = 24.0
+texture = SubResource( 2 )
+
+[node name="EnergyProgress" parent="GUI/FarmerIndicator" instance=ExtResource( 10 )]

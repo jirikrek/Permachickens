@@ -13,7 +13,6 @@ func test_minute_signal():
 	assert_signal_not_emitted(game_o_clock, "minute_tick")
 	
 	forward_time(game_o_clock.game_minute_real_msec)
-	game_o_clock.recalculate()
 	assert_signal_emitted(game_o_clock, "minute_tick")
 	
 
@@ -23,11 +22,9 @@ func test_two_minutes():
 
 	# first minute
 	forward_time(game_o_clock.game_minute_real_msec)
-	game_o_clock.recalculate()
 
 	# second minute
 	forward_time(game_o_clock.game_minute_real_msec)
-	game_o_clock.recalculate()
 
 	assert_signal_emit_count(game_o_clock, "minute_tick", 2)
 
@@ -37,6 +34,5 @@ func test_two_minutes_in_one_run():
 	watch_signals(game_o_clock)
 	
 	forward_time(game_o_clock.game_minute_real_msec * 2)
-	game_o_clock.recalculate()
 	
 	assert_signal_emit_count(game_o_clock, "minute_tick", 2)
