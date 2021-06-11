@@ -1,6 +1,6 @@
 extends BaseOClockTest
 
-var hen_scene = load("res://hen/hen.tscn")
+var hen_scene = load("res://game/hen/hen.tscn")
 var hen: Hen
 
 

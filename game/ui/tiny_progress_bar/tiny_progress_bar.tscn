@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://game/ui/ui1.png" type="Texture" id=1]
+[ext_resource path="res://game/ui/progress_bar/need_progress_bar.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 176, 129, 16, 3 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 176, 141, 16, 3 )
+
+[node name="ProgressIndicator" type="TextureProgress"]
+margin_left = -3.0
+margin_top = -1.0
+margin_right = 13.0
+margin_bottom = 2.0
+rect_scale = Vector2( 0.4, 0.4 )
+mouse_filter = 2
+value = 39.998
+texture_under = SubResource( 1 )
+texture_progress = SubResource( 2 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

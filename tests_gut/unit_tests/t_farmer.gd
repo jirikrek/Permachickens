@@ -1,6 +1,6 @@
 extends BaseOClockTest
 
-var farmer_scene := load("res://farmer/farmer.tscn")
+var farmer_scene := load("res://game/farmer/farmer.tscn")
 var farmer: Farmer
 
 func before_each():

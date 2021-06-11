@@ -32,7 +32,7 @@ _global_script_classes=[ {
 "base": "BTDecorator",
 "class": "BTFoodUtility",
 "language": "GDScript",
-"path": "res://behavior_tree/decorators/bt_food_utility.gd"
+"path": "res://game/behavior_tree/decorators/bt_food_utility.gd"
 }, {
 "base": "BTDecorator",
 "class": "BTGuard",
@@ -47,7 +47,7 @@ _global_script_classes=[ {
 "base": "BTDecorator",
 "class": "BTNeedUtility",
 "language": "GDScript",
-"path": "res://behavior_tree/decorators/bt_need_utility.gd"
+"path": "res://game/behavior_tree/decorators/bt_need_utility.gd"
 }, {
 "base": "Node",
 "class": "BTNode",
@@ -107,7 +107,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "BaseNeed",
 "language": "GDScript",
-"path": "res://common/scripts/needs/base_need.gd"
+"path": "res://game/common/scripts/needs/base_need.gd"
 }, {
 "base": "GUTTest",
 "class": "BaseOClockTest",
@@ -127,7 +127,7 @@ _global_script_classes=[ {
 "base": "BTLeaf",
 "class": "Cohesion",
 "language": "GDScript",
-"path": "res://behavior_tree/leaves/cohesion.gd"
+"path": "res://game/behavior_tree/leaves/cohesion.gd"
 }, {
 "base": "GraphNode",
 "class": "CommonNode",
@@ -137,32 +137,32 @@ _global_script_classes=[ {
 "base": "BTLeaf",
 "class": "Drink",
 "language": "GDScript",
-"path": "res://behavior_tree/leaves/drink.gd"
+"path": "res://game/behavior_tree/leaves/drink.gd"
 }, {
 "base": "BTLeaf",
 "class": "Eat",
 "language": "GDScript",
-"path": "res://behavior_tree/leaves/eat.gd"
+"path": "res://game/behavior_tree/leaves/eat.gd"
 }, {
 "base": "BaseNeed",
 "class": "Energy",
 "language": "GDScript",
-"path": "res://common/scripts/needs/energy.gd"
+"path": "res://game/common/scripts/needs/energy.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Farmer",
 "language": "GDScript",
-"path": "res://farmer/farmer.gd"
+"path": "res://game/farmer/farmer.gd"
 }, {
 "base": "BTLeaf",
 "class": "FindNodeFromGroup",
 "language": "GDScript",
-"path": "res://behavior_tree/leaves/find_node_from_group.gd"
+"path": "res://game/behavior_tree/leaves/find_node_from_group.gd"
 }, {
 "base": "BaseNeed",
 "class": "Food",
 "language": "GDScript",
-"path": "res://common/scripts/needs/food.gd"
+"path": "res://game/common/scripts/needs/food.gd"
 }, {
 "base": "Control",
 "class": "GUT",
@@ -177,7 +177,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "GameOClock",
 "language": "GDScript",
-"path": "res://common/scripts/game_o_clock.gd"
+"path": "res://game/common/scripts/game_o_clock.gd"
 }, {
 "base": "EditorVCSInterface",
 "class": "GitAPI",
@@ -187,7 +187,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Hen",
 "language": "GDScript",
-"path": "res://hen/hen.gd"
+"path": "res://game/hen/hen.gd"
 }, {
 "base": "Reference",
 "class": "Ignorer",
@@ -197,7 +197,7 @@ _global_script_classes=[ {
 "base": "BaseNeed",
 "class": "LifeLength",
 "language": "GDScript",
-"path": "res://common/scripts/needs/life_length.gd"
+"path": "res://game/common/scripts/needs/life_length.gd"
 }, {
 "base": "Resource",
 "class": "LocalTime",
@@ -212,12 +212,12 @@ _global_script_classes=[ {
 "base": "BTLeaf",
 "class": "MoveInDirection",
 "language": "GDScript",
-"path": "res://behavior_tree/leaves/move_in_direction.gd"
+"path": "res://game/behavior_tree/leaves/move_in_direction.gd"
 }, {
 "base": "BTLeaf",
 "class": "MoveTowards",
 "language": "GDScript",
-"path": "res://behavior_tree/leaves/move_towards.gd"
+"path": "res://game/behavior_tree/leaves/move_towards.gd"
 }, {
 "base": "ConfirmationDialog",
 "class": "OptionsDialog",
@@ -227,7 +227,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "RealWorldTime",
 "language": "GDScript",
-"path": "res://common/scripts/real_world_time.gd"
+"path": "res://game/common/scripts/real_world_time.gd"
 }, {
 "base": "Reference",
 "class": "Result",
@@ -242,7 +242,7 @@ _global_script_classes=[ {
 "base": "BTLeaf",
 "class": "SaveClickDir",
 "language": "GDScript",
-"path": "res://behavior_tree/leaves/save_click_dir.gd"
+"path": "res://game/behavior_tree/leaves/save_click_dir.gd"
 }, {
 "base": "Reference",
 "class": "SnakeCase",
@@ -252,7 +252,7 @@ _global_script_classes=[ {
 "base": "BTLeaf",
 "class": "StayInRadius",
 "language": "GDScript",
-"path": "res://behavior_tree/leaves/stay_in_radius.gd"
+"path": "res://game/behavior_tree/leaves/stay_in_radius.gd"
 }, {
 "base": "Resource",
 "class": "TimeUnit",
@@ -262,12 +262,12 @@ _global_script_classes=[ {
 "base": "BTComposite",
 "class": "UtilitySelector",
 "language": "GDScript",
-"path": "res://behavior_tree/composites/utility_selector.gd"
+"path": "res://game/behavior_tree/composites/utility_selector.gd"
 }, {
 "base": "BaseNeed",
 "class": "Water",
 "language": "GDScript",
-"path": "res://common/scripts/needs/water.gd"
+"path": "res://game/common/scripts/needs/water.gd"
 } ]
 _global_script_class_icons={
 "BTAlways": "res://addons/behavior_tree/icons/btalways.svg",
@@ -341,12 +341,12 @@ Run_All_Tests=Object(InputEventKey,"resource_local_to_scene":false,"resource_nam
 [application]
 
 config/name="PermaChicks"
-run/main_scene="res://main.tscn"
+run/main_scene="res://game/main.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Globals="*res://auto_loads/globals.gd"
+Globals="*res://game/globals.gd"
 
 [debug]
 

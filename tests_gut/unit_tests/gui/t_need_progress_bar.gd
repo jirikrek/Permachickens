@@ -7,7 +7,7 @@ var e: Energy
 
 func before_all():
 	.before_all()
-	progress_scene = load("res://ui/energy_bar.tscn")
+	progress_scene = load("res://game/ui/progress_bar/progress_bar.tscn")
 
 
 func before_each():
