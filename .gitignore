@@ -12,7 +12,7 @@ data_*/
 
 # Binaries
 bin/
-build/
+builds/
 lib/
 
 tests/results.xml

@@ -47,8 +47,8 @@ __meta__ = {
 
 [node name="Flock" parent="Level/Objects" instance=ExtResource( 4 )]
 position = Vector2( 24.9452, 108.69 )
-chickens = 7
-chickenScene = ExtResource( 7 )
+hens = 7
+henScene = ExtResource( 7 )
 
 [node name="Chicken1" parent="Level/Objects" instance=ExtResource( 7 )]
 position = Vector2( -42, 161 )

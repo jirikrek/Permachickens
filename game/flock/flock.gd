@@ -1,8 +1,8 @@
 tool
 extends Node2D
 
-export var chickens := 5 setget set_chickens
-export var chickenScene : Resource
+export var hens := 5 setget set_hens
+export var henScene: PackedScene
 export var radius := 40 setget set_radius
 
 func _ready():
@@ -21,13 +21,13 @@ func remove_hens():
 		
 
 func create_hens():
-	if chickenScene == null:
+	if henScene == null:
 		return
 		
-	for i in range(chickens):
-		var chick:Node2D = chickenScene.instance()
-		chick.position = position + Vector2(randf() * radius - radius / 2, randf() * radius - radius / 2)
-		get_parent().call_deferred("add_child", chick)
+	for i in range(hens):
+		var hen:Node2D = henScene.instance()
+		hen.position = position + Vector2(randf() * radius - radius / 2, randf() * radius - radius / 2)
+		get_parent().call_deferred("add_child", hen)
 
 
 func set_radius(new_radius):
@@ -35,6 +35,6 @@ func set_radius(new_radius):
 	regenerate()
 
 
-func set_chickens(new_chickens):
-	chickens = new_chickens
+func set_hens(new_hens):
+	hens = new_hens
 	regenerate()

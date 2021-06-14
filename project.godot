@@ -259,7 +259,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/GdCommons/DateTime/src/TimeUnit.gd"
 }, {
-"base": "BTComposite",
+"base": "Reference",
 "class": "UtilitySelector",
 "language": "GDScript",
 "path": "res://game/behavior_tree/composites/utility_selector.gd"
@@ -320,7 +320,7 @@ _global_script_class_icons={
 "SnakeCase": "",
 "StayInRadius": "",
 "TimeUnit": "",
-"UtilitySelector": "res://addons/behavior_tree/icons/btsequence.svg",
+"UtilitySelector": "",
 "Water": ""
 }
 
